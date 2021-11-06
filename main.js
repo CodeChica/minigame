@@ -1,6 +1,5 @@
-  
-"use strict";
 
+ document.addEventListener('DOMContentLoaded', function(event) {
 const Player = (sign) => {
   this.sign = sign;
 
@@ -134,3 +133,4 @@ const gameController = (() => {
 
   return { playRound, getIsOver, reset };
 })();
+ });
