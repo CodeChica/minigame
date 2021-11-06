@@ -1,7 +1,14 @@
 body {
-    color: blue;
-  }
-  
-  h1 {
-    color: green;
-  }
+  color: blue;
+}
+
+h1 {
+  color: green;
+}
+
+.gameboard {
+  background-color: purple;
+}
+
+.field {
+}
