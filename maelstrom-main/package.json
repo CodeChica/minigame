@@ -1,0 +1,41 @@
+{
+  "name": "maelstrom",
+  "version": "1.0.0",
+  "description": "MAELSTROM       =========",
+  "main": "application.js",
+  "scripts": {
+    "clean": "rm -fr dist/",
+    "prebuild": "npm run clean && mkdir -p dist/js dist/css dist/img dist/audio",
+    "build": "npm run build:js && npm run build:html && npm run build:css && npm run build:img && npm run build:audio",
+    "build:js": "browserify public/javascripts/application.js > dist/js/application.js",
+    "build:html": "cp index.html dist/",
+    "build:css": "cp public/stylesheets/*.css dist/css",
+    "build:img": "cp public/images/* dist/img/",
+    "build:audio": "cp public/audio/* dist/audio/",
+    "lint": "jshint js/*.js",
+    "test": "istanbul test jasmine",
+    "test:coverage": "istanbul cover jasmine",
+    "env": "env",
+    "start": "ruby -run -e httpd dist/ -p 9090"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mokhan/maelstrom.git"
+  },
+  "author": "mokhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mokhan/maelstrom/issues"
+  },
+  "homepage": "https://github.com/mokhan/maelstrom",
+  "devDependencies": {
+    "browserify": "latest",
+    "codeclimate-test-reporter": "latest",
+    "istanbul": "latest",
+    "jasmine": "latest",
+    "jshint": "latest"
+  },
+  "dependencies": {
+    "underscore": "latest"
+  }
+}
