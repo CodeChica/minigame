@@ -10,5 +10,10 @@ h1 {
   background-color: purple;
 }
 
+h2 {
+  text-align: center;
+  font-size: 100px;
+}
+
 .field {
 }
